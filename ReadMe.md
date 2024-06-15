@@ -26,14 +26,6 @@ This extension modifies the Table of Contents (ToC) links and `mw-headline` elem
    wfLoadExtension( 'ReplaceUnderscoreInTOC' );
    ```
 
-3. **Clear the Cache**
-
-   Clear your browser cache and MediaWiki cache to ensure the new JavaScript code is loaded. You can purge the cache for a specific page by appending `?action=purge` to the URL of the page.
-
-   ```bash
-   php maintenance/rebuildLocalisationCache.php --force
-   ```
-
 ## Files
 
 - `ReplaceUnderscoreInTOC.php`: The main PHP file for the extension.
