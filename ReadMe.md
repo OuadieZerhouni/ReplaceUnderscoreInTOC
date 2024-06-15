@@ -15,7 +15,7 @@ This extension modifies the Table of Contents (ToC) links and `mw-headline` elem
 
    ```bash
    cd extensions
-   git clone https://github.com/yourusername/ReplaceUnderscoreInTOC.git
+   git clone https://github.com/OuadieZerhouni/ReplaceUnderscoreInTOC.git
    ```
 
 2. **Enable the Extension**
