@@ -1,6 +1,4 @@
-Here's a sample `README.md` file for your MediaWiki extension repository:
 
-```markdown
 # ReplaceUnderscoreInTOC
 
 A MediaWiki extension to replace underscores with hyphens in Table of Contents links.
@@ -56,18 +54,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-- Your Name - [yourusername](https://github.com/yourusername)
-
-```
-
-### Explanation
-
-- **Title and Description**: Provides a brief description of the extension.
-- **Installation**: Instructions for downloading, enabling, and clearing the cache.
-- **Files**: Lists the files included in the extension and their purposes.
-- **Usage**: Explains how the extension works once installed.
-- **Development**: Encourages contributions and mentions pull requests.
-- **License**: Specifies the license under which the extension is distributed.
-- **Author**: Provides information about the author with a link to their GitHub profile.
-
-You can customize the README further based on your preferences and any additional details you want to include.
+- Ouadie ZERHOUNI - [OuadieZerhouni](https://github.com/OuadieZerhouni)
