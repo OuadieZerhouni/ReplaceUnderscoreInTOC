@@ -1,0 +1,21 @@
+{
+    "name": "ReplaceUnderscoreInTOC",
+    "version": "1.0.0",
+    "author": "Your Name",
+    "type": "parserhook",
+    "manifest_version": 1,
+    "AutoloadClasses": {
+        "ReplaceUnderscoreInTOC": "ReplaceUnderscoreInTOC.php"
+    },
+    "Hooks": {
+        "BeforePageDisplay": "ReplaceUnderscoreInTOC::onBeforePageDisplay"
+    },
+    "ResourceModules": {
+        "ext.replaceUnderscoreInTOC": {
+            "scripts": [
+                "extensions/ReplaceUnderscoreInTOC/ReplaceUnderscoreInTOC.js"
+            ],
+            "position": "top"
+        }
+    }
+}
