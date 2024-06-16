@@ -1,7 +1,7 @@
 {
     "name": "ReplaceUnderscoreInTOC",
     "version": "1.0.0",
-    "author": "Your Name",
+    "author": "Ouadie ZERHOUNI",
     "type": "parserhook",
     "manifest_version": 1,
     "AutoloadClasses": {

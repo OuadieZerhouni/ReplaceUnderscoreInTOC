@@ -1,5 +1,4 @@
 <?php
-
 if ( !defined( 'MEDIAWIKI' ) ) {
     exit;
 }
@@ -27,8 +26,7 @@ class ReplaceUnderscoreInTOC {
         $html = $out->getHTML();
 
         // Replace underscores with hyphens in TOC anchors
-        $modifiedHtml = self::replaceTocAnchors($html);
-
+        $modifiedHtml = self::replaceTocAnchorsAndHeadlines($html);
         // Set the modified HTML back to OutputPage
         $out->clearHTML();
         $out->addHTML($modifiedHtml);
@@ -37,18 +35,32 @@ class ReplaceUnderscoreInTOC {
     }
 
     /**
-     * Replace underscores with hyphens in TOC HTML anchors.
+     * Replace underscores with hyphens in TOC HTML anchors and headline IDs.
      *
      * @param string $html
      * @return string
      */
-    private static function replaceTocAnchors( $html ) {
-        return preg_replace_callback(
-            '/href="#([^"]+)"/',
+    private static function replaceTocAnchorsAndHeadlines( $html ) {
+        // Replace underscores with hyphens in TOC href attributes
+        $html = preg_replace_callback(
+            '/<li class="toclevel-[0-9]+ tocsection-[0-9]+">.*?<a href="#([^"]+)".*?<\/a>/s',
             function($matches) {
-                return 'href="#' . str_replace('_', '-', $matches[1]) . '"';
+                $newHref = str_replace('_', '-', $matches[1]);
+                return str_replace($matches[1], $newHref, $matches[0]);
             },
             $html
         );
+
+        // Replace underscores with hyphens in headline IDs
+        $html = preg_replace_callback(
+            '/<span class="mw-headline" id="([^"]+)">/s',
+            function($matches) {
+                $newId = str_replace('_', '-', $matches[1]);
+                return str_replace($matches[1], $newId, $matches[0]);
+            },
+            $html
+        );
+
+        return $html;
     }
 }
