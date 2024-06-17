@@ -1,7 +1,7 @@
 
 # ReplaceUnderscoreInTOC
 
-A MediaWiki extension to replace underscores with hyphens in Table of Contents links.
+A **MediaWiki** extension to replace underscores with hyphens in Table of Contents links.
 
 ## Description
 
