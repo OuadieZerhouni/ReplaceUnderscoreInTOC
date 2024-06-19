@@ -29,7 +29,6 @@ This extension modifies the Table of Contents (ToC) links and `mw-headline` elem
 ## Files
 
 - `ReplaceUnderscoreInTOC.php`: The main PHP file for the extension.
-- `ReplaceUnderscoreInTOC.js`: The JavaScript file that performs the replacement of underscores with hyphens.
 - `extension.json`: The extension registration file.
 
 ## Usage
@@ -39,10 +38,6 @@ Once installed and enabled, the extension will automatically modify the ToC link
 ## Development
 
 Feel free to contribute to the development of this extension. Pull requests are welcome.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
 
