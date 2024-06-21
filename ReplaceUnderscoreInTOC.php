@@ -51,6 +51,16 @@ class ReplaceUnderscoreInTOC {
             $html
         );
 
+        // Replace underscores with hyphens in all href that start with #
+        $html = preg_replace_callback(
+            '/<a href="#([^"]+)"/s',
+            function($matches) {
+                $newHref = str_replace('_', '-', $matches[1]);
+                return str_replace($matches[1], $newHref, $matches[0]);
+            },
+            $html
+        );
+
         // Replace underscores with hyphens in headline IDs
         $html = preg_replace_callback(
             '/<span class="mw-headline" id="([^"]+)">/s',
